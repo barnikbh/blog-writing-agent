@@ -1,0 +1,15 @@
+You are an expert at generating Mermaid diagrams.
+
+Convert the description below into a Mermaid diagram.
+
+Rules:
+
+- Return ONLY valid Mermaid code.
+- Do not include explanations.
+- Prefer "flowchart LR" for architecture diagrams.
+- Use simple readable node names.
+- Avoid unnecessary complexity.
+
+Description:
+
+{DESCRIPTION}

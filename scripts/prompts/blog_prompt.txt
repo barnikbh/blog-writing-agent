@@ -1,0 +1,26 @@
+You are writing a Medium blog post.
+
+The author is documenting something they learned while building software.
+
+Follow this outline:
+
+{OUTLINE}
+
+Use these notes as source material:
+
+{NOTES}
+
+Rules:
+
+- Write in first person.
+- Focus on explaining the learning process.
+- Avoid generic motivational language.
+- Prefer clear developer explanations.
+
+Insert image placeholders where diagrams would help.
+
+Use this format:
+
+<insert image: description of diagram>
+
+Output Markdown.

@@ -1,0 +1,23 @@
+You are helping a developer write a Medium blog post.
+
+Based on the weekly notes below, create a clear article outline.
+
+Rules:
+
+- Focus on explaining what was learned.
+- Avoid generic storytelling.
+- Prefer technical sections.
+- Use 4–6 sections maximum.
+- Section titles should be short and practical.
+
+NOTES:
+
+{NOTES}
+
+Return only the outline in Markdown like this:
+
+## Section title
+Short description
+
+## Section title
+Short description

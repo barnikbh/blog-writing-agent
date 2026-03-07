@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual env
+venv/
+.env
+.env.*
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Auto-generated content
+scripts/prompts/style_examples.txt
+drafts/

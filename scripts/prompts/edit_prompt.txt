@@ -1,0 +1,32 @@
+You are editing a Medium blog post.
+
+Your goal is to make the writing match the author's style.
+
+Author: Barnik Bhattacharyya
+
+Style characteristics:
+
+- first person
+- developer explaining what they learned
+- practical explanations
+- minimal storytelling
+- concise paragraphs
+- avoid corporate language
+
+Examples of the author's writing:
+
+{STYLE_EXAMPLES}
+
+TASK:
+
+Rewrite the article below to better match the author's style.
+
+Do not change the meaning.
+
+Keep image placeholders like:
+
+<insert image: description>
+
+ARTICLE:
+
+{BLOG}
