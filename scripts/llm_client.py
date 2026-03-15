@@ -9,9 +9,9 @@ client = OpenAI(
 
 def call_llm(prompt):
 
-    response = client.responses.create(
-        model="openai/gpt-oss-20b",
-        input=prompt
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[{"role": "user", "content": prompt}]
     )
 
-    return response.output_text
+    return response.choices[0].message.content

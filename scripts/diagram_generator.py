@@ -20,7 +20,11 @@ def generate_diagram(description):
 
     mermaid_code = call_llm(prompt)
 
-    return f"```mermaid\n{mermaid_code}\n```"
+    # Strip any code fences the LLM may have included to avoid double-wrapping
+    mermaid_code = re.sub(r"^```(?:mermaid)?\n?", "", mermaid_code.strip())
+    mermaid_code = re.sub(r"\n?```$", "", mermaid_code.strip())
+
+    return f"```mermaid\n{mermaid_code.strip()}\n```"
 
 
 def replace_diagrams(text):

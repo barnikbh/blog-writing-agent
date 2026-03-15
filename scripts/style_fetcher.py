@@ -8,9 +8,14 @@ MEDIUM_USERNAME = "barnikbh"
 MAX_POSTS = 5
 
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+
 def fetch_medium_posts():
     feed_url = f"https://medium.com/feed/@{MEDIUM_USERNAME}"
-    feed = feedparser.parse(feed_url)
+    feed = feedparser.parse(feed_url, request_headers=HEADERS)
 
     posts = []
 
@@ -21,7 +26,12 @@ def fetch_medium_posts():
 
 
 def extract_text(url):
-    r = requests.get(url)
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=10)
+        r.raise_for_status()
+    except requests.RequestException:
+        return ""
+
     soup = BeautifulSoup(r.text, "html.parser")
 
     paragraphs = soup.find_all("p")
